@@ -49,6 +49,13 @@ jobs:
         run: pnpm build:lib
         if: ${{ steps.release.outputs.releases_created }}
 
+      - name: Check if version is already published
+        run: |
+          if npm view @polgubau/steganography@$npm_package_version; then
+            echo "Version $npm_package_version already published, skipping publish."
+            exit 1
+          fi
+
       - name: Publish
         run: npm publish --access public
         if: ${{ steps.release.outputs.releases_created }}
