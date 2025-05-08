@@ -68,10 +68,10 @@ Example: `git commit -m "chore: v1.2.0" -m "Release-As: 1.2.0"`
 
 ## Author
 
-<img src="https://media.licdn.com/dms/image/D4D03AQE_bxd8zdkpdA/profile-displayphoto-shrink_800_800/0/1687167840824?e=1717632000&v=beta&t=sWgOo4n1AQdiEq8PBanUtR2oZbQbX65I73229cdYu3k" alt="Profile Picture" width="50" height="50">
+<img src="https://avatars.githubusercontent.com/u/63197171?v=4" alt="Profile Picture" width="50" height="50">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/eyalevi/)
-[![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=flat-square&logo=github)](https://github.com/LeviEyal)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/polgubauamores/)
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=flat-square&logo=github)](https://github.com/PolGubau)
 
 ## License
 [MIT](LICENSE)
