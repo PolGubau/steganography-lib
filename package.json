@@ -1,74 +1,65 @@
 {
-  "name": "@polgubau/steganography",
-  "version": "0.0.1",
-  "description": "Fast and simple steganography library for hiding data in images.",
-  "main": "lib/index.cjs.js",
-  "private": false,
-  "module": "lib/index.esm.js",
-  "browser": "lib/index.umd.js",
-  "typings": "lib/src/index.d.ts",
-  "keywords": [
-    "steganography",
-    "image",
-    "data",
-    "hide"
-  ],
-  "scripts": {
-    "dev": "rollup -c --configPlugin typescript --watch",
-    "clean": "rm -rf lib",
-    "build:lib": "rollup -c --configPlugin typescript --sourcemap",
-    "test": "vitest --watch=false",
-    "test:watch": "vitest",
-    "coverage": "vitest --coverage --watch=false  --root src/",
-    "coverage:watch": "vitest --coverage --watch  --root src/",
-    "prepare": "husky",
-    "lint": "eslint . --ext .ts --fix"
-  },
-  "files": [
-    "lib"
-  ],
-  "type": "module",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LeviEyal/typescript-library-template.git"
-  },
-  "author": "LeviEyal",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/LeviEyal/typescript-library-template/issues"
-  },
-  "homepage": "https://github.com/LeviEyal/typescript-library-template#readme",
-  "devDependencies": {
-    "@rollup/plugin-commonjs": "^25.0.7",
-    "@rollup/plugin-json": "^6.1.0",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-typescript": "^11.1.6",
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@vitest/coverage-v8": "3.1.3",
-    "eslint": "^8.57.0",
-    "eslint-config-standard-with-typescript": "^43.0.1",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-n": "^16.6.2",
-    "eslint-plugin-promise": "^6.1.1",
-    "husky": "^9.0.11",
-    "jsdom": "^26.1.0",
-    "lint-staged": "^15.2.2",
-    "prettier": "3.2.5",
-    "rollup": "^4.13.0",
-    "ts-node": "^10.9.2",
-    "tslib": "^2.6.2",
-    "typescript": "^5.4.3",
-    "vitest": "^3.1.3"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "vitest"
-    ]
-  }
+	"name": "@polgubau/steganography",
+	"version": "0.0.1",
+	"description": "Fast and simple steganography library for hiding data in images.",
+	"main": "lib/index.cjs.js",
+	"private": false,
+	"module": "lib/index.esm.js",
+	"browser": "lib/index.umd.js",
+	"typings": "lib/src/index.d.ts",
+	"keywords": ["steganography", "image", "data", "hide"],
+	"scripts": {
+		"dev": "rollup -c --configPlugin typescript --watch",
+		"clean": "rm -rf lib",
+		"build:lib": "rollup -c --configPlugin typescript --sourcemap",
+		"test": "vitest --watch=false",
+		"test:watch": "vitest",
+		"coverage": "vitest --coverage --watch=false  --root src/",
+		"coverage:watch": "vitest --coverage --watch  --root src/",
+		"prepare": "husky",
+		"lint": "biome check --fix"
+	},
+	"files": ["lib"],
+	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/LeviEyal/typescript-library-template.git"
+	},
+	"author": "LeviEyal",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/LeviEyal/typescript-library-template/issues"
+	},
+	"homepage": "https://github.com/LeviEyal/typescript-library-template#readme",
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@rollup/plugin-commonjs": "^25.0.7",
+		"@rollup/plugin-json": "^6.1.0",
+		"@rollup/plugin-node-resolve": "^15.2.3",
+		"@rollup/plugin-typescript": "^11.1.6",
+		"@typescript-eslint/eslint-plugin": "^6.21.0",
+		"@vitest/coverage-v8": "3.1.3",
+		"eslint": "^8.57.0",
+		"eslint-config-standard-with-typescript": "^43.0.1",
+		"eslint-plugin-import": "^2.29.1",
+		"eslint-plugin-n": "^16.6.2",
+		"eslint-plugin-promise": "^6.1.1",
+		"husky": "^9.0.11",
+		"jsdom": "^26.1.0",
+		"lint-staged": "^15.2.2",
+		"prettier": "3.2.5",
+		"rollup": "^4.13.0",
+		"ts-node": "^10.9.2",
+		"tslib": "^2.6.2",
+		"typescript": "^5.4.3",
+		"vitest": "^3.1.3"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"src/**/*.{js,jsx,ts,tsx}": ["eslint --fix", "vitest"]
+	}
 }
