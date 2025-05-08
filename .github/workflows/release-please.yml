@@ -42,7 +42,7 @@ jobs:
         if: ${{ steps.release.outputs.releases_created }}
 
       - name: CI
-        run: pnpm i --immutable --immutable-cache --check-cache
+        run: pnpm i --frozen-lockfile
         if: ${{ steps.release.outputs.releases_created }}
 
       - name: Build
