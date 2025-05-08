@@ -42,7 +42,7 @@ jobs:
         if: ${{ steps.release.outputs.releases_created }}
 
       - name: CI
-        run: pnpm i --frozen-lockfile
+        run: pnpm i
         if: ${{ steps.release.outputs.releases_created }}
 
       - name: Build
