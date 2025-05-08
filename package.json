@@ -1,6 +1,6 @@
 {
 	"name": "@polgubau/steganography",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Fast and simple steganography library for hiding data in images.",
 	"main": "lib/index.cjs.js",
 	"private": false,
