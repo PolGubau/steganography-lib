@@ -1,17 +1,19 @@
 {
   "compilerOptions": {
-    "esModuleInterop": true,
+    "target": "ESNext",
+    "lib": [
+      "ESNext",
+      "dom"
+    ],
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "declaration": true,
-    "noImplicitAny": true,
-    "outDir": ".",
-    "target": "esnext",
     "resolveJsonModule": true,
-  },
-  "include": [
-    "src/**/*",
-    "rollup.config.ts",
-  ],
-  "exclude": ["node_modules"],
+    "strict": true,
+    "strictNullChecks": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "verbatimModuleSyntax": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true
+  }
 }
