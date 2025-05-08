@@ -33,12 +33,20 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
         if: ${{ steps.release.outputs.releases_created }}
 
+        # use pnpm
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: false
+        if: ${{ steps.release.outputs.releases_created }}
+
       - name: CI
-        run: npm install --immutable --immutable-cache --check-cache
+        run: pnpm i --immutable --immutable-cache --check-cache
         if: ${{ steps.release.outputs.releases_created }}
 
       - name: Build
-        run: npm run build:lib
+        run: pnpm build:lib
         if: ${{ steps.release.outputs.releases_created }}
 
       - name: Publish

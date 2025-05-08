@@ -6,12 +6,17 @@
 	"private": false,
 	"module": "lib/index.esm.js",
 	"browser": "lib/index.umd.js",
-	"typings": "lib/src/index.d.ts",
-	"keywords": ["steganography", "image", "data", "hide"],
+	"types": "lib/types/src/index.d.ts",
+	"keywords": [
+		"steganography",
+		"image",
+		"data",
+		"hide"
+	],
 	"scripts": {
 		"dev": "rollup -c --configPlugin typescript --watch",
 		"clean": "rm -rf lib",
-		"build:lib": "rollup -c --configPlugin typescript --sourcemap",
+		"build:lib": "rollup -c rollup.config.mjs",
 		"test": "vitest --watch=false",
 		"test:watch": "vitest",
 		"coverage": "vitest --coverage --watch=false  --root src/",
@@ -19,7 +24,9 @@
 		"prepare": "husky",
 		"lint": "biome check --fix"
 	},
-	"files": ["lib"],
+	"files": [
+		"lib"
+	],
 	"type": "module",
 	"repository": {
 		"type": "git",
@@ -60,6 +67,9 @@
 		}
 	},
 	"lint-staged": {
-		"src/**/*.{js,jsx,ts,tsx}": ["eslint --fix", "vitest"]
+		"src/**/*.{js,jsx,ts,tsx}": [
+			"eslint --fix",
+			"vitest"
+		]
 	}
 }
